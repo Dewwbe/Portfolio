@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Download, Mail } from "lucide-react";
 import { profile } from "../data/portfolio.js";
 
-const markColors = ["var(--magenta)", "var(--marigold)", "var(--teal)"];
+const markColors = ["var(--violet)", "var(--cobalt)", "var(--teal)"];
 const dev = (p) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${p}.svg`;
 const orbit = [
   { name: "React", src: dev("react/react-original") },
@@ -100,6 +100,7 @@ export default function Hero() {
                 />
                 <motion.span
                   className="mantra-word"
+                  style={{ "--word-glow": markColors[i] }}
                   initial={{ y: "105%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.7, delay: 0.25 + i * 0.28, ease }}

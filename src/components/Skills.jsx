@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import SectionHeading from "./SectionHeading.jsx";
 import { skillGroups } from "../data/portfolio.js";
 
-const tileColors = ["#E6337A", "#FFB400", "#00B3A4", "#3D5AFE", "#8B5CF6", "#FF6B3D"];
+const tileColors = ["#FF2E7E", "#FFB020", "#00E5FF", "#3B82F6", "#8B5CF6", "#FF7A45"];
 
 function monogram(name) {
   const clean = name.replace(/[^A-Za-z0-9+ ]/g, " ").trim().split(/\s+/);
