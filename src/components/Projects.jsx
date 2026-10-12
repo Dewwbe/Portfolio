@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "./SectionHeading.jsx";
@@ -11,11 +11,18 @@ function Cover({ project }) {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [30, -30]);
   const [c1, c2] = project.palette;
+  const [imageFailed, setImageFailed] = useState(false);
 
-  if (project.image) {
+  if (project.image && !imageFailed) {
     return (
       <div ref={ref} className="cover">
-        <motion.img style={{ y }} src={project.image} alt={`Screenshot of ${project.name}`} loading="lazy" />
+        <motion.img
+          style={{ y }}
+          src={project.image}
+          alt={`Screenshot of ${project.name}`}
+          loading="lazy"
+          onError={() => setImageFailed(true)}
+        />
       </div>
     );
   }
@@ -96,7 +103,7 @@ export default function Projects() {
       <div className="container">
         <SectionHeading
           title="Featured work"
-          intro="Five projects that show how I approach a problem, from architecture to measurable results."
+          intro="Seven projects that show how I approach a problem, from architecture to measurable results."
           color="var(--magenta)"
         />
 
