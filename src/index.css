@@ -237,7 +237,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .results li { display: grid; gap: 0.25rem; align-content: start; padding: 0.9rem; border-radius: var(--r-md); background: var(--surface); border: 1.5px solid var(--line); border-top: 4px solid var(--accent); }
 .results strong { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; overflow-wrap: anywhere; }
 .results span { font-size: 0.83rem; color: var(--ink-soft); line-height: 1.35; }
-.feature-body .btn { margin-top: 1.4rem; }
+.feature-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.4rem; }
+.feature-actions:empty { display: none; }
+.more-links { display: flex; gap: 0.5rem; }
 
 .more-title { font-size: 1.5rem; margin: 5rem 0 1.25rem; }
 .more-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }

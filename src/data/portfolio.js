@@ -16,7 +16,7 @@ export const profile = {
   location: "Sri Lanka",
   cv: "/Dewmini_Navarathne_CV.pdf", // TODO: copy your CV PDF into public/ with this name
   socials: {
-    github: "https://github.com/", // TODO: your GitHub profile URL
+    github: "https://github.com/Dewwbe",
     linkedin: "https://www.linkedin.com/", // TODO: your LinkedIn profile URL
     medium: "https://medium.com/", // TODO: your Medium profile URL
   },
@@ -146,6 +146,7 @@ export const featuredProjects = [
     palette: ["#8B5CF6", "#3D5AFE"],
     image: "/screenshots/ss1.png",
     link: "",
+    github: "https://github.com/Dewwbe/ConsultAI-A-Governed-Multi-Agent-Decision-Intelligence-Platform",
   },
   {
     id: "gulfmart",
@@ -168,6 +169,7 @@ export const featuredProjects = [
     palette: ["#00B3A4", "#3D5AFE"],
     image: "/screenshots/ss2.png",
     link: "",
+    github: "https://github.com/Dewwbe/Supply-Chain-Intelligence-Risk-Analytics-Platform",
   },
   {
     id: "tracelake",
@@ -186,6 +188,7 @@ export const featuredProjects = [
     palette: ["#00E5FF", "#8B5CF6"],
     image: "/screenshots/ss3.png",
     link: "",
+    github: "https://github.com/Dewwbe/TraceLake-AML-Transaction-Monitoring-on-Azure-Databricks.-",
   },
   {
     id: "journal-entry-testing",
@@ -204,6 +207,7 @@ export const featuredProjects = [
     palette: ["#FFB400", "#FF6B3D"],
     image: "/screenshots/ss4.png",
     link: "",
+    github: "https://github.com/Dewwbe/Journal-Entry-Testing-Audit-Analytics",
   },
   {
     id: "suwa-manasa",
@@ -225,6 +229,7 @@ export const featuredProjects = [
     palette: ["#8B5CF6", "#00B3A4"],
     image: "",
     link: "",
+    github: "https://github.com/Dewwbe/Research_Project_Frontend--AI-powered-mobile-application-for-supporting-Mental-Wellness-in-children-",
   },
   {
     id: "trip-pilot",
@@ -243,6 +248,7 @@ export const featuredProjects = [
     palette: ["#FFB400", "#E6337A"],
     image: "/screenshots/ss6.png",
     link: "",
+    github: "https://github.com/Dewwbe/Travel-Planner-Agent",
   },
   {
     id: "smartgrow",
@@ -261,6 +267,7 @@ export const featuredProjects = [
     palette: ["#22C55E", "#00B3A4"],
     image: "/screenshots/ss7.png",
     link: "",
+    github: "https://github.com/Dewwbe/SmartGrow-AI--Backend-",
   },
 ];
 
@@ -270,36 +277,42 @@ export const otherProjects = [
     text: "Multi-tenant SaaS monorepo with NestJS, Prisma, BullMQ and Socket.IO, four-level RBAC and strict tenant isolation.",
     stack: ["NestJS", "PostgreSQL", "Redis", "React"],
     link: "",
+    github: "https://github.com/Dewwbe/Enterprise-Collaboration-Platform-",
   },
   {
     name: "NomNom",
     text: "Food ordering and delivery system: ten microservices behind an NGINX gateway, orchestrated with Kubernetes, with Stripe payments.",
     stack: ["Spring Boot", "Express.js", "Kubernetes", "Next.js"],
     link: "",
+    github: "https://github.com/Dewwbe/Food-Ordering-and-delivery-System",
   },
   {
     name: "CeylonAgriGrow",
     text: "MERN web app with Gemini for crop and fertiliser prediction, a pest and disease recommender, and a farmers' marketplace.",
     stack: ["MERN", "Gemini API"],
     link: "",
+    github: "https://github.com/Dewwbe/CeylonAgriGrow_with_AI",
   },
   {
     name: "Weather API",
     text: "Backend REST API for weather tracking and notifications using OpenWeather, Gemini and Nodemailer on Google Cloud.",
     stack: ["Node.js", "MongoDB", "Google Cloud"],
     link: "",
+    github: "https://github.com/Dewwbe/Weather_backend",
   },
   {
     name: "ZeroWaste",
     text: "Mobile app for waste-disposal scheduling, tracking, sorting and an eco store.",
     stack: ["React Native", "Firebase"],
     link: "",
+    github: "https://github.com/Dewwbe/Waste_Management_Mobile_Application",
   },
   {
     name: "Pneumonia Detection",
     text: "Trained model for pneumonia detection.", // TODO: add a one-line description, dataset and accuracy
     stack: ["Python", "Deep learning"],
     link: "",
+    github: "",
   },
 ];
 

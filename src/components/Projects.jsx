@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import SectionHeading from "./SectionHeading.jsx";
 import Reveal from "./Reveal.jsx";
 import { featuredProjects, otherProjects } from "../data/portfolio.js";
@@ -65,11 +66,18 @@ function FeaturedProject({ project, index }) {
           {project.stack.map((s) => <li key={s}>{s}</li>)}
         </ul>
 
-        {project.link && (
-          <a className="btn btn-primary btn-sm" href={project.link} target="_blank" rel="noreferrer">
-            View application <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
-        )}
+        <div className="feature-actions">
+          {project.link && (
+            <a className="btn btn-primary btn-sm" href={project.link} target="_blank" rel="noreferrer">
+              View application <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+          )}
+          {project.github && (
+            <a className="btn btn-ghost btn-sm" href={project.github} target="_blank" rel="noreferrer">
+              <FaGithub size={16} aria-hidden="true" /> View on GitHub
+            </a>
+          )}
+        </div>
       </div>
     </motion.article>
   );
@@ -103,11 +111,18 @@ export default function Projects() {
             >
               <div className="more-head">
                 <h4>{p.name}</h4>
-                {p.link && (
-                  <a href={p.link} target="_blank" rel="noreferrer" aria-label={`Open ${p.name}`}>
-                    <ArrowUpRight size={18} />
-                  </a>
-                )}
+                <span className="more-links">
+                  {p.github && (
+                    <a href={p.github} target="_blank" rel="noreferrer" aria-label={`${p.name} on GitHub`}>
+                      <FaGithub size={18} />
+                    </a>
+                  )}
+                  {p.link && (
+                    <a href={p.link} target="_blank" rel="noreferrer" aria-label={`Open ${p.name}`}>
+                      <ArrowUpRight size={18} />
+                    </a>
+                  )}
+                </span>
               </div>
               <p>{p.text}</p>
               <ul className="chips chips--small" aria-label="Tech stack">
