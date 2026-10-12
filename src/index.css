@@ -224,6 +224,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .cover { position: sticky; top: 100px; aspect-ratio: 4 / 3; border-radius: var(--r-lg); overflow: hidden; box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--line), 0 0 50px -18px var(--accent, var(--violet)); }
 .cover img { width: 100%; height: 115%; object-fit: cover; }
 .cover--art { display: grid; place-items: center; color: #fff; }
+.cover--blank { background: var(--surface); }
 .cover-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px); background-size: 32px 32px; }
 .cover-icon { position: relative; filter: drop-shadow(0 12px 24px rgba(0,0,0,.2)); }
 .cover-chips { position: absolute; left: 1rem; right: 1rem; bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }

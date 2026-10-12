@@ -121,8 +121,7 @@ export const experience = [
   },
 ];
 
-// image: screenshots live in public/screenshots/. If an image file is missing,
-// the card falls back to its own illustrated cover.
+// image: screenshots live in public/screenshots/. Without one, the cover stays blank.
 // link: TODO — paste each "View Application" URL from your CV.
 export const featuredProjects = [
   {
@@ -203,7 +202,7 @@ export const featuredProjects = [
     stack: ["SQL Server 2025", "SSMS", "Power BI Desktop", "DAX"],
     icon: "Layers",
     palette: ["#FFB400", "#FF6B3D"],
-    image: "",
+    image: "/screenshots/ss4.png",
     link: "",
   },
   {
@@ -242,7 +241,7 @@ export const featuredProjects = [
     stack: ["Next.js", "FastAPI", "LangGraph", "OpenAI", "MCP", "PostgreSQL", "Docker Compose"],
     icon: "Plane",
     palette: ["#FFB400", "#E6337A"],
-    image: "",
+    image: "/screenshots/ss6.png",
     link: "",
   },
   {
@@ -260,7 +259,7 @@ export const featuredProjects = [
     stack: ["FastAPI", "MongoDB", "Python", "scikit-learn", "Power BI", "Docker", "Flutter", "MQTT", "IoT devices"],
     icon: "Sprout",
     palette: ["#22C55E", "#00B3A4"],
-    image: "",
+    image: "/screenshots/ss7.png",
     link: "",
   },
 ];

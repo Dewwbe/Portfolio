@@ -3,50 +3,28 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "./SectionHeading.jsx";
 import Reveal from "./Reveal.jsx";
-import Icon from "./Icon.jsx";
 import { featuredProjects, otherProjects } from "../data/portfolio.js";
 
 function Cover({ project }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [30, -30]);
-  const [c1, c2] = project.palette;
   const [imageFailed, setImageFailed] = useState(false);
 
-  if (project.image && !imageFailed) {
-    return (
-      <div ref={ref} className="cover">
-        <motion.img
-          style={{ y }}
-          src={project.image}
-          alt={`Screenshot of ${project.name}`}
-          loading="lazy"
-          onError={() => setImageFailed(true)}
-        />
-      </div>
-    );
+  // Blank cover when there is no screenshot (or it fails to load).
+  if (!project.image || imageFailed) {
+    return <div ref={ref} className="cover cover--blank" aria-hidden="true" />;
   }
 
-  // Illustrated cover used until a real screenshot is added.
   return (
-    <div ref={ref} className="cover cover--art" style={{ background: `linear-gradient(135deg, ${c1}, ${c2})` }} role="img" aria-label={`${project.name} illustration`}>
-      <span className="cover-grid" aria-hidden="true" />
-      <motion.span className="cover-icon" style={{ y }} aria-hidden="true">
-        <Icon name={project.icon} size={96} strokeWidth={1.4} />
-      </motion.span>
-      <div className="cover-chips" aria-hidden="true">
-        {project.stack.slice(0, 4).map((s, i) => (
-          <motion.span
-            key={s}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 + i * 0.1 }}
-          >
-            {s}
-          </motion.span>
-        ))}
-      </div>
+    <div ref={ref} className="cover">
+      <motion.img
+        style={{ y }}
+        src={project.image}
+        alt={`Screenshot of ${project.name}`}
+        loading="lazy"
+        onError={() => setImageFailed(true)}
+      />
     </div>
   );
 }
